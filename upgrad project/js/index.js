@@ -5,18 +5,26 @@ const events = [
 ];
 
 const container = document.getElementById("homeEvents");
+
+// Clear container first (important if render runs multiple times)
+container.innerHTML = "";
+
 events.forEach(ev => {
-  container.innerHTML += `
-    <div class="col-md-4">
-      <div class="card shadow-sm mb-3">
-        <div class="card-body">
-          <h5 class="card-title">${ev.name}</h5>
-          <p>Category: ${ev.category}</p>
-          <p>Date: ${ev.date}</p>
-          <p>Time: ${ev.time}</p>
-          <a href="register.html?id=${ev.id}" class="btn btn-primary">Register</a>
-        </div>
+  const col = document.createElement("div");
+  col.className = "col-md-4";
+
+  col.innerHTML = `
+    <div class="card shadow-sm mb-3">
+      <div class="card-body">
+        <h5 class="card-title">${ev.name}</h5>
+        <p>Category: ${ev.category}</p>
+        <p>Date: ${ev.date}</p>
+        <p>Time: ${ev.time}</p>
+        <a href="register.html?id=${ev.id}" class="btn btn-primary">Register</a>
       </div>
     </div>
   `;
+
+  container.appendChild(col);
 });
+
