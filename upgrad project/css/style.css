@@ -1,0 +1,197 @@
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #e3f2fd, #f9f9f9);
+  color: #333;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Navbar */
+.navbar {
+  background: linear-gradient(90deg, #0d6efd, #6610f2);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+.navbar-brand {
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #fff !important;
+}
+.nav-link {
+  margin-right: 10px;
+  color: #fff !important;
+  transition: color 0.2s ease;
+}
+.nav-link.active {
+  font-weight: bold;
+  color: #ffeb3b !important;
+}
+.nav-link:hover {
+  color: #ffdd57 !important;
+}
+
+/* Headings */
+h1, h2 {
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #0d6efd;
+}
+.card {
+  border: none;
+  border-radius: 12px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  background: #fff;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+.card-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #6610f2;
+}
+
+#eventDetails {
+  border-radius: 12px;
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 15px;
+}
+#eventDetails p {
+  margin: 5px 0;
+  font-size: 1rem;
+}
+
+form {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+form input, form textarea {
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+form input:focus, form textarea:focus {
+  border-color: #6610f2;
+  box-shadow: 0 0 5px rgba(102,16,242,0.3);
+}
+button {
+  border-radius: 8px;
+  padding: 10px 18px;
+  transition: background-color 0.2s ease;
+}
+button:hover {
+  opacity: 0.9;
+}
+.login-page .container,
+.contact-page .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+}
+.login-page form,
+.contact-page form {
+  width: 100%;
+  max-width: 400px;
+}
+
+textarea {
+  min-height: 120px;
+}
+
+
+#searchInput {
+  border-radius: 8px;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+#searchInput:focus {
+  border-color: #0d6efd;
+  box-shadow: 0 0 5px rgba(13,110,253,0.3);
+}
+
+
+#logoutBtn {
+  border-radius: 8px;
+  padding: 10px 16px;
+  background-color: #dc3545;
+  color: #fff;
+}
+#logoutBtn:hover {
+  background-color: #c82333;
+}
+
+
+@media (max-width: 768px) {
+  h1, h2 {
+    font-size: 1.5rem;
+  }
+  .card-title {
+    font-size: 1rem;
+  }
+  .navbar-brand {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  body {
+    font-size: 0.9rem;
+  }
+  .container {
+    margin-bottom: 20px;
+  }
+  button {
+    width: 100%;
+  }
+  .card {
+    margin-bottom: 20px;
+  }
+}
+
+.login-page, .contact-page {
+  background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;   
+}
+.login-page .container,
+.contact-page .container {
+  flex: 1;                  
+  display: flex;
+  flex-direction: column;   
+  justify-content: center;
+  align-items: center;
+}
+
+.page-title {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #0d6efd;
+}
+
+.login-page form,
+.contact-page form {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  width: 100%;
+  max-width: 400px;
+}
+.footer {
+  position: relative;   
+  bottom: 0;
+  width: 100%;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+}
+
+.home-page, .events-page {
+  background: linear-gradient(135deg, #f9f9f9, #e3f2fd);
+  min-height: 100vh;
+}
